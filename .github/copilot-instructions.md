@@ -13,6 +13,7 @@ The server and client communicate over REST/HTTP.
 
 ```
 katan/
+├── doc/
 ├── src/
 │   ├── Katan.Server/       # ASP.NET Core Web API — game engine & rules
 │   ├── Katan.Client/       # Client application
@@ -20,8 +21,17 @@ katan/
 ├── tests/
 │   ├── Katan.Server.Tests/
 │   └── Katan.Client.Tests/
+├── work/
+│   ├── work-piece/
+│   └── another-work-piece/
+│   └── (...)/
 └── Katan.sln
 ```
+
+- `src/` contains the main application code for server, client, and shared models.
+- `tests/` contains unit and integration tests for both server and client.
+- `work/` is where pieces of work (features, bug fixes, etc.) are planned before being implemented. Each piece of work gets its own folder with a README describing the task and any relevant details. The terms `work` and `piece` are voluntary vague to allow for any kind of task, from a small bug fix to a large feature. Planning agents can organize and describe work here.
+- `doc/` is for any documentation related to the project, such as ARDs, design docs, etc.
 
 ## Build, Test & Run
 
