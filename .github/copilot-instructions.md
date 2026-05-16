@@ -7,7 +7,7 @@ Katan is a turn-based board game implemented in C#. It has two main components:
 - **Server** – game rules, state management, and engine logic (no UI dependencies)
 - **Client** – user interface for playing the game (UI tech TBD)
 
-The server and client communicate over REST/HTTP.
+The server and client communicate over gRPC.
 
 ## Repository Structure (planned)
 
@@ -59,7 +59,7 @@ dotnet run --project src/Katan.Client
 
 ### Server
 
-The server is a pure game engine exposed via REST API. It owns all game rules and enforces state transitions. Key responsibilities:
+The server is a pure game engine exposed via gRPC. It owns all game rules and enforces state transitions. Key responsibilities:
 
 - Maintain authoritative game state
 - Validate and apply player actions (moves, turns)
@@ -73,7 +73,7 @@ The server should have **no knowledge of the UI**. All game logic lives here.
 The client is a stateless consumer of the server API. It is responsible for:
 
 - Rendering the current game state received from the server
-- Collecting player input and sending it as HTTP requests
+- Collecting player input and sending it as gRPC requests
 - Displaying feedback from the server (validation errors, game events)
 
 The client should contain **no game rules**. Any rule enforcement belongs in the server.
@@ -86,7 +86,7 @@ DTOs and request/response models shared between server and client live in `Katan
 
 - **Separation of concerns**: Game rules must not leak into the client. If you find yourself writing conditional game logic on the client, move it to the server.
 - **State is server-side**: The server holds the single source of truth for game state. The client re-renders from whatever the server returns.
-- **Action-based API**: Each player action (e.g., `POST /games/{id}/actions`) sends an action object and receives the new game state in return.
+- **Action-based API**: Each player action sends an action message via gRPC and receives the new game state in return.
 - **Immutable game state snapshots**: Prefer returning a full state snapshot per turn rather than incremental patches, to keep client logic simple.
 - **xUnit** for tests; **FluentAssertions** for assertions (preferred but not required yet).
 - **C# naming conventions**: PascalCase for types and members, camelCase for local variables, `_camelCase` for private fields.
