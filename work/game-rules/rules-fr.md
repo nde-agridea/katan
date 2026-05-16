@@ -60,7 +60,15 @@ Chaque tuile produit une ressource spécifique lorsque son numéro est obtenu au
 
 La partie commence avec le **joueur le plus grand**. Le jeu se déroule dans le **sens des aiguilles d'une montre**.
 
-> ⚠️ La phase de placement initial (poser les premières colonies et routes avant le premier tour) n'est pas décrite dans le brouillon. Elle doit être définie.
+### Phase de placement initial
+
+Avant le premier tour, chaque joueur place ses pièces de départ dans le sens des aiguilles d'une montre. Lorsque c'est au tour d'un joueur de placer :
+
+1. Placer **1 colonie** sur un croisement de tuiles au choix.
+2. Placer **2 routes**, chacune reliée à la colonie ou au réseau de routes du joueur.
+3. Recevoir **1 carte ressource pour chaque tuile adjacente à la colonie placée** (les tuiles désert ne rapportent rien).
+
+Tous les placements sont **gratuits** (aucun coût en ressources). Il n'y a **pas de règle de distance** — une colonie peut être placée à côté de n'importe quelle autre colonie.
 
 ---
 
@@ -130,10 +138,8 @@ Pour utiliser un port, un joueur doit posséder une colonie ou une ville sur une
 ### Règles de placement
 
 **Colonies**
-- Doivent être placées sur une tuile.
+- Doivent être placées sur un croisement de tuiles.
 - À l'exception de la toute première colonie posée en début de partie, une colonie doit être reliée à une autre colonie du joueur par une route.
-
-> ⚠️ Le brouillon ne mentionne pas la règle de distance (deux colonies ne peuvent pas être adjacentes). À clarifier.
 
 **Villes**
 - Construites en améliorant une colonie existante. La colonie est remplacée par la ville.

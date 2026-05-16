@@ -60,7 +60,15 @@ Each tile produces a specific resource when its number is rolled.
 
 The game starts with the **tallest player** going first. Play proceeds **clockwise**.
 
-> ⚠️ The draft does not describe the initial placement phase (placing starting settlements and roads before the first turn). This needs to be defined.
+### Initial placement phase
+
+Before the first turn, each player places their starting pieces in clockwise order. When it is a player's turn to place:
+
+1. Place **1 settlement** on any tile intersection.
+2. Place **2 roads**, each connected to the player's settlement or road network.
+3. Receive **1 resource card for each tile adjacent to the placed settlement** (desert tiles yield nothing).
+
+All placements are **free** (no resource cost). There is **no distance rule** — a settlement may be placed adjacent to any other settlement.
 
 ---
 
@@ -130,10 +138,8 @@ To use a port, a player must have a settlement or city on a tile adjacent to tha
 ### Placement rules
 
 **Settlements**
-- Must be placed on a tile.
+- Must be placed on a tile intersection.
 - Except for the very first settlement placed at the start of the game, a settlement must be connected to another of the player's settlements via a road.
-
-> ⚠️ The draft does not mention the standard Catan distance rule (no two settlements adjacent). Needs clarification.
 
 **Cities**
 - Built by upgrading an existing settlement. The settlement is replaced by the city.
