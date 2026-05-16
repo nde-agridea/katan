@@ -99,6 +99,14 @@ Katan is designed to be played in multiple languages. **French is the first supp
 - New player-facing strings must be accompanied by at least an English and a French translation.
 - Translation keys should be descriptive and namespaced (e.g. `resource.wood`, `action.build_settlement`, `error.not_your_turn`).
 
+### Rules documents
+
+The canonical rules document is `work/game-rules/rules.md` (English). Each supported language has a corresponding translation:
+
+- `work/game-rules/rules-fr.md` — French
+
+**Whenever `rules.md` is modified, all translation files must be updated in the same change.** No rule addition, removal, or clarification may be merged into `rules.md` without a matching update to every translation. The translations must reflect the same content, structure, and ⚠️ ambiguity callouts as the English source.
+
 ## Key Conventions
 
 - **Separation of concerns**: Game rules must not leak into the client. If you find yourself writing conditional game logic on the client, move it to the server.
