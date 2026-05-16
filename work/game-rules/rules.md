@@ -28,7 +28,7 @@ The first player to reach **10 victory points** wins the game.
 | Item | Quantity |
 |---|---|
 | Map tiles | 19 (4 forest, 3 quarry, 3 field, 3 pasture, 3 mountain, 2 mine, 1 desert) |
-| Number tokens | 19 (values 2–12) |
+| Number tokens | 19 (values 2–6 and 8–12 for resource tiles; value 7 for the desert tile) |
 | Settlements | 25 (5 per player) |
 | Cities | 20 (4 per player) |
 | Roads | 75 (15 per player) |
@@ -53,6 +53,52 @@ Each tile produces a specific resource when its number is rolled.
 | Mountain | Stone |
 | Mine | Iron |
 | Desert | None |
+
+---
+
+## Map
+
+The game map consists of **19 hexagonal tiles** arranged in a random shape that is generated freshly each game. Unlike a fixed arrangement, the map shape varies and must satisfy the constraints below.
+
+### Shape constraints
+
+- All 19 tiles must form **one contiguous connected group** — no isolated clusters.
+- The map must contain **no enclosed holes** (no empty space fully surrounded by tiles).
+- **No thin peninsula may exceed 2 tiles in length.** A thin peninsula is a chain where each interior tile has exactly 2 neighbors.
+
+### Desert placement
+
+The desert tile is placed after the overall shape is determined.
+
+- The desert **must not be an edge tile**. An edge tile is any tile that has at least one exposed side (fewer than 6 neighbors within the map).
+- In other words, the desert must have all 6 of its neighbors occupied by other tiles.
+
+### Number token placement
+
+- Each of the 18 non-desert tiles receives one number token from the set {2, 3, 4, 5, 6, 8, 9, 10, 11, 12}.
+- The desert tile receives the **7 token**. This token is visual only: it produces no resources and grants no additional effect. The robber mechanic is triggered by any roll of 7 regardless of this token.
+- **High-value adjacency rule**: no two tiles from the set {5, 6, 8, 9} may be adjacent to each other.
+
+### Resource tile distribution
+
+The 18 non-desert resource tiles are distributed randomly, subject to one constraint:
+
+- **No three mutually adjacent tiles may all share the same resource type** (triangle constraint).
+
+### Ports
+
+The map has **8 ports**: 6 specialized ports (2:1, one per resource type) and 2 generic ports (3:1).
+
+- Ports are placed on exposed edges of coastal tiles (tiles that have at least one exposed side).
+- **No two ports may be placed on adjacent coastal edges.**
+- The assignment of which specialized port corresponds to which resource is random.
+
+### Map approval
+
+After the server generates a map, all players are shown the full map before the initial placement phase begins.
+
+- Players vote to accept or reject the map. A **majority vote** rejects the map and triggers a re-generation.
+- The map may be re-generated at most **3 times**. After the third re-generation, the resulting map is used regardless of the vote.
 
 ---
 
@@ -121,7 +167,7 @@ To use a port, a player must have a settlement or city on a tile adjacent to tha
 | Generic port (3:1) | Trade 3 identical resources for 1 resource of any type |
 | Specialized port (2:1) | Trade 2 resources of a specific type for 1 resource of any type |
 
-> ⚠️ Which specific resource each specialized port accepts needs to be defined in the map layout.
+There is one specialized port per resource type (6 in total) and 2 generic ports. Port positions and specialized port assignments are determined randomly during map generation (see [Map](#map)).
 
 ---
 

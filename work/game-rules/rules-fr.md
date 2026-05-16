@@ -28,7 +28,7 @@ Le premier joueur à atteindre **10 points de victoire** remporte la partie.
 | Élément | Quantité |
 |---|---|
 | Tuiles de la carte | 19 (4 forêt, 3 carrière, 3 champ, 3 pâturage, 3 montagne, 2 mine, 1 désert) |
-| Jetons numéros | 19 (valeurs de 2 à 12) |
+| Jetons numéros | 19 (valeurs 2 à 6 et 8 à 12 pour les tuiles ressources ; valeur 7 pour la tuile désert) |
 | Colonies | 25 (5 par joueur) |
 | Villes | 20 (4 par joueur) |
 | Routes | 75 (15 par joueur) |
@@ -53,6 +53,52 @@ Chaque tuile produit une ressource spécifique lorsque son numéro est obtenu au
 | Montagne | Pierre |
 | Mine | Fer |
 | Désert | Aucune |
+
+---
+
+## Carte
+
+La carte de jeu est composée de **19 tuiles hexagonales** disposées selon une forme aléatoire, générée à chaque nouvelle partie. Contrairement à une disposition fixe, la forme varie et doit respecter les contraintes ci-dessous.
+
+### Contraintes de forme
+
+- Les 19 tuiles doivent former **un seul groupe contigu et connecté** — aucun groupe isolé n'est autorisé.
+- La carte ne doit comporter **aucun trou fermé** (aucun espace vide entièrement entouré de tuiles).
+- **Aucune péninsule étroite ne peut dépasser 2 tuiles de longueur.** Une péninsule étroite est une chaîne de tuiles dans laquelle chaque tuile intérieure n'a exactement que 2 voisins.
+
+### Placement du désert
+
+La tuile désert est placée après que la forme générale a été déterminée.
+
+- Le désert **ne doit pas être une tuile de bord**. Une tuile de bord est une tuile ayant au moins un côté exposé (moins de 6 voisins dans la carte).
+- Autrement dit, le désert doit avoir ses 6 voisins tous occupés par d'autres tuiles.
+
+### Placement des jetons numéros
+
+- Chacune des 18 tuiles non-désert reçoit un jeton numéro parmi l'ensemble {2, 3, 4, 5, 6, 8, 9, 10, 11, 12}.
+- La tuile désert reçoit le **jeton 7**. Ce jeton est purement visuel : il ne produit aucune ressource et n'entraîne aucun effet supplémentaire. Le mécanisme du voleur est déclenché par tout résultat de 7, indépendamment de ce jeton.
+- **Règle d'adjacence des jetons à haute valeur** : aucune paire de tuiles appartenant à l'ensemble {5, 6, 8, 9} ne peut être adjacente.
+
+### Distribution des tuiles ressources
+
+Les 18 tuiles ressources non-désert sont distribuées aléatoirement, avec une seule contrainte :
+
+- **Aucun groupe de trois tuiles mutuellement adjacentes ne peut être entièrement du même type de ressource** (contrainte de triangle).
+
+### Ports
+
+La carte comporte **8 ports** : 6 ports spécialisés (2:1, un par type de ressource) et 2 ports génériques (3:1).
+
+- Les ports sont placés sur les côtés exposés des tuiles côtières (tuiles ayant au moins un côté exposé).
+- **Deux ports ne peuvent pas être placés sur des côtés côtiers adjacents.**
+- L'attribution des ressources aux ports spécialisés est aléatoire.
+
+### Validation de la carte
+
+Après la génération de la carte par le serveur, tous les joueurs voient la carte complète avant le début de la phase de placement initial.
+
+- Les joueurs votent pour accepter ou rejeter la carte. Un **vote majoritaire** rejette la carte et déclenche une nouvelle génération.
+- La carte peut être régénérée au maximum **3 fois**. Après la troisième régénération, la carte obtenue est utilisée quelle que soit l'issue du vote.
 
 ---
 
@@ -121,7 +167,7 @@ Pour utiliser un port, un joueur doit posséder une colonie ou une ville sur une
 | Port générique (3:1) | Échanger 3 ressources identiques contre 1 ressource au choix |
 | Port spécialisé (2:1) | Échanger 2 ressources d'un type spécifique contre 1 ressource au choix |
 
-> ⚠️ La ressource acceptée par chaque port spécialisé doit être définie dans le plan de la carte.
+Il existe un port spécialisé par type de ressource (6 au total) et 2 ports génériques. Les positions des ports et l'attribution des ressources aux ports spécialisés sont déterminées aléatoirement lors de la génération de la carte (voir [Carte](#carte)).
 
 ---
 
