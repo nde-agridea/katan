@@ -82,6 +82,23 @@ The client should contain **no game rules**. Any rule enforcement belongs in the
 
 DTOs and request/response models shared between server and client live in `Katan.Shared`. This project should contain no business logic — only data contracts.
 
+## Internationalization (i18n)
+
+Katan is designed to be played in multiple languages. **French is the first supported language.**
+
+### Core principles
+
+- **The codebase is English-only.** All identifiers, types, method names, comments, log messages, and domain concepts are written in English. No French (or other language) text ever appears in source code.
+- **All player-facing strings are translated.** Any text shown to a player — UI labels, game event descriptions, error messages, card names, resource names, tile names — must go through the translation layer. Hard-coded display strings in code are not acceptable.
+- **Translation is a first-class concern.** When designing a feature that produces player-facing output, defining the translation keys and their English and French values is part of the work, not an afterthought.
+- **Domain model terms are English.** The ubiquitous language of the codebase uses English terms (e.g. `Settlement`, `Road`, `ResourceType.Wood`, `ActionType.BuildCity`). Translations map these concepts to display strings in each supported language — they do not influence the domain model.
+
+### Translation approach
+
+- Translation resources live in `Katan.Client` (display strings) and, where applicable, in `Katan.Shared` (string keys / enums that drive translation lookups).
+- New player-facing strings must be accompanied by at least an English and a French translation.
+- Translation keys should be descriptive and namespaced (e.g. `resource.wood`, `action.build_settlement`, `error.not_your_turn`).
+
 ## Key Conventions
 
 - **Separation of concerns**: Game rules must not leak into the client. If you find yourself writing conditional game logic on the client, move it to the server.
