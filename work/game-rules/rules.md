@@ -179,7 +179,7 @@ There is one specialized port per resource type (6 in total) and 2 generic ports
 | Settlement | 2 Wood + 1 Brick + 1 Wheat + 1 Sheep |
 | City | 3 Stone + 2 Wheat |
 | Army | 2 Iron + 1 Wheat |
-| Development card | (cost not specified in draft) ⚠️ |
+| Development card | 1 Stone + 1 Sheep + 1 Iron |
 
 ### Placement rules
 
@@ -214,15 +214,19 @@ The player immediately moves the robber to any tile of their choice. They may st
 
 Grants 1 victory point.
 
-#### Road Building *(count unspecified ⚠️)*
+#### Road Building *(3 cards)*
 
 Grants 1 free road, placed immediately.
 
-#### Monopoly *(count unspecified ⚠️)*
+#### Monopoly *(2 cards)*
 
 The player names a resource type. Every other player must give them one card of that resource. Players who have none give nothing.
 
-#### Catastrophe *(count unspecified ⚠️)*
+#### Excess *(3 cards)*
+
+The player receives 2 resource cards of their choice from the bank.
+
+#### Disaster *(1 card)*
 
 The player chooses any tile on the map.
 - If a settlement or city is on that tile, it is destroyed.

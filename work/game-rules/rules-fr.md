@@ -179,7 +179,7 @@ Il existe un port spécialisé par type de ressource (6 au total) et 2 ports gé
 | Colonie | 2 Bois + 1 Brique + 1 Blé + 1 Mouton |
 | Ville | 3 Pierre + 2 Blé |
 | Armée | 2 Fer + 1 Blé |
-| Carte développement | (coût non précisé dans le brouillon) ⚠️ |
+| Carte développement | 1 Pierre + 1 Mouton + 1 Fer |
 
 ### Règles de placement
 
@@ -214,15 +214,19 @@ Le joueur déplace immédiatement le voleur sur une tuile de son choix. Il peut 
 
 Donne 1 point de victoire.
 
-#### Construction de route *(nombre de cartes non précisé ⚠️)*
+#### Construction de route *(3 cartes)*
 
 Donne 1 route gratuite, placée immédiatement.
 
-#### Monopole *(nombre de cartes non précisé ⚠️)*
+#### Monopole *(2 cartes)*
 
 Le joueur choisit un type de ressource. Chaque autre joueur doit lui donner une carte de cette ressource. Les joueurs qui n'en ont pas ne donnent rien.
 
-#### Catastrophe *(nombre de cartes non précisé ⚠️)*
+#### Excédent *(3 cartes)*
+
+Le joueur reçoit 2 cartes ressources de son choix depuis la banque.
+
+#### Catastrophe *(1 carte)*
 
 Le joueur choisit une tuile de la carte.
 - Si une colonie ou une ville s'y trouve, elle est détruite.
