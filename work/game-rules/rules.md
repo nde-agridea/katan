@@ -200,9 +200,7 @@ There is one specialized port per resource type (6 in total) and 2 generic ports
 
 ## Development Cards
 
-Development cards may be purchased during a player's turn.
-
-> ⚠️ The draft states cards "must be used immediately." This means a card cannot be saved for a future turn. Confirm this is intentional — it differs significantly from standard rules.
+Development cards may be purchased during a player's turn. A purchased card must be used immediately on that same turn — it cannot be saved for a future turn.
 
 ### Card types
 
@@ -240,9 +238,7 @@ The robber is moved whenever a player rolls a **7**, or when a **Knight** card i
 
 - The tile occupied by the robber **produces no resources**.
 - **When first moved onto a tile**: if another player has a settlement or city there, the player who moved the robber may steal one random resource card from them. This steal happens only once per placement.
-- **Each subsequent turn**: as long as the robber remains on a tile, any player with a settlement or city on that tile must give up one resource of their choice at the start of their turn.
-
-> ⚠️ The ongoing resource loss per turn is unusual. Confirm this is intentional and define the exact timing (start of turn? after dice roll?).
+- **Each subsequent turn**: as long as the robber remains on a tile, any player with a settlement or city on that tile must give up one resource of their choice **after the dice roll** on their turn.
 
 ---
 
@@ -252,24 +248,27 @@ The robber is moved whenever a player rolls a **7**, or when a **Knight** card i
 
 An army is built by spending **2 Iron + 1 Wheat**. It must be placed on a tile where the player has a settlement or city.
 
+### Tile Ownership
+
+Tiles start the game as **unclaimed**. A tile is claimed when a player first places an army on it — either by building there or by moving an army onto it. Once claimed, a tile remains owned and can never return to unclaimed. Ownership transfers to the victorious attacker after a successful battle.
+
 ### Movement
 
 A player may move any number of their armies during their turn, before or after attacking. An army may move from one tile to an adjacent tile, provided the destination:
 
-- belongs to the player, **or**
-- contains one of the player's settlements or cities.
-
-> ⚠️ "Belongs to the player" needs a precise definition — does this mean a tile the player has conquered?
+- is owned by the player, **or**
+- contains one of the player's settlements or cities, **or**
+- is unclaimed (moving onto it claims it).
 
 ### Combat
 
 A player may attack an adjacent tile that contains enemy armies.
 
 **Attack roll:**
-- The attacker rolls up to **3 dice** (1 die per 2 attacking armies, rounded down).
-- The defender rolls up to **2 dice** (1 die per 2 defending armies, rounded down).
-
-> ⚠️ The comparison rule (how dice results are compared to determine casualties) is not described. Needs definition.
+- Each attacking and defending army contributes **1 die**.
+- Both sides roll all their dice simultaneously and sum the results.
+- The side with the higher total wins the exchange. **Ties go to the defender.**
+- Combat is resolved in a **single round**.
 
 **If the attacker wins** (all defending armies are eliminated):
 - The tile is conquered.
@@ -284,9 +283,7 @@ A player may attack an adjacent tile that contains enemy armies.
 
 ## Special Bonuses
 
-Both bonuses are awarded **at the end of the game only**.
-
-> ⚠️ The draft says bonuses are attributed only at end of game. Clarify whether they are tracked and displayed mid-game (for information) or calculated only when a player reaches 10 VP.
+The current leader for each bonus is tracked and **displayed live during the game** for all players to see. The **+2 victory points are awarded only at the end of the game**, when a player reaches 10 VP.
 
 ### Longest Road
 

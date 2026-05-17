@@ -200,9 +200,7 @@ Il existe un port spécialisé par type de ressource (6 au total) et 2 ports gé
 
 ## Cartes développement
 
-Les cartes développement peuvent être achetées pendant le tour d'un joueur.
-
-> ⚠️ Le brouillon indique que les cartes « doivent être utilisées immédiatement ». Cela signifie qu'une carte ne peut pas être conservée pour un tour ultérieur. Confirmer que c'est intentionnel — cela diffère significativement des règles habituelles.
+Les cartes développement peuvent être achetées pendant le tour d'un joueur. Une carte achetée doit être utilisée immédiatement lors de ce même tour — elle ne peut pas être conservée pour un tour ultérieur.
 
 ### Types de cartes
 
@@ -240,9 +238,7 @@ Le voleur est déplacé lorsqu'un joueur obtient **7** aux dés ou joue une cart
 
 - La tuile occupée par le voleur **ne produit aucune ressource**.
 - **Lors du premier placement sur une tuile** : si un autre joueur possède une colonie ou une ville sur cette tuile, le joueur qui a déplacé le voleur peut lui voler une carte ressource au hasard. Ce vol n'a lieu qu'une seule fois par placement.
-- **À chaque tour suivant** : tant que le voleur reste sur une tuile, tout joueur possédant une colonie ou une ville sur cette tuile doit céder une ressource de son choix au début de son tour.
-
-> ⚠️ La perte de ressource continue à chaque tour est inhabituelle. Confirmer que c'est intentionnel et préciser le moment exact (début de tour ? après le lancer de dés ?).
+- **À chaque tour suivant** : tant que le voleur reste sur une tuile, tout joueur possédant une colonie ou une ville sur cette tuile doit céder une ressource de son choix **après le lancer de dés** de son tour.
 
 ---
 
@@ -252,24 +248,27 @@ Le voleur est déplacé lorsqu'un joueur obtient **7** aux dés ou joue une cart
 
 Une armée est construite en dépensant **2 Fer + 1 Blé**. Elle doit être placée sur une tuile où le joueur possède une colonie ou une ville.
 
+### Propriété des tuiles
+
+Les tuiles démarrent la partie comme **non revendiquées**. Une tuile est revendiquée lorsqu'un joueur y place une armée pour la première fois — en la construisant ou en y déplaçant une armée. Une fois revendiquée, une tuile reste la propriété du joueur et ne peut jamais redevenir non revendiquée. La propriété est transférée au vainqueur après un combat réussi.
+
 ### Déplacement
 
 Un joueur peut déplacer autant d'armées qu'il le souhaite pendant son tour, avant ou après une attaque. Une armée peut se déplacer d'une tuile vers une tuile adjacente, à condition que la destination :
 
 - appartienne au joueur, **ou**
-- contienne une colonie ou une ville du joueur.
-
-> ⚠️ « Appartenir au joueur » doit être défini précisément — cela désigne-t-il une tuile conquise par le joueur ?
+- contienne une colonie ou une ville du joueur, **ou**
+- soit non revendiquée (s'y déplacer la revendique).
 
 ### Combat
 
 Un joueur peut attaquer une tuile adjacente contenant des armées ennemies.
 
 **Lancer d'attaque :**
-- L'attaquant lance jusqu'à **3 dés** (1 dé par tranche de 2 armées attaquantes, arrondi à l'inférieur).
-- Le défenseur lance jusqu'à **2 dés** (1 dé par tranche de 2 armées défenseurs, arrondi à l'inférieur).
-
-> ⚠️ La règle de comparaison des dés (comment les résultats sont comparés pour déterminer les pertes) n'est pas décrite. À définir.
+- Chaque armée attaquante et défenseure contribue **1 dé**.
+- Les deux camps lancent tous leurs dés simultanément et additionnent les résultats.
+- Le camp avec le total le plus élevé gagne l'échange. **En cas d'égalité, le défenseur l'emporte.**
+- Le combat est résolu en **un seul tour de dés**.
 
 **Si l'attaquant gagne** (toutes les armées du défenseur sont éliminées) :
 - La tuile est conquise.
@@ -284,9 +283,7 @@ Un joueur peut attaquer une tuile adjacente contenant des armées ennemies.
 
 ## Bonus spéciaux
 
-Les deux bonus sont attribués **uniquement en fin de partie**.
-
-> ⚠️ Le brouillon indique que les bonus ne sont attribués qu'en fin de partie. Clarifier s'ils sont suivis et affichés en cours de partie (à titre informatif) ou calculés uniquement lorsqu'un joueur atteint 10 points de victoire.
+Le meneur actuel pour chaque bonus est suivi et **affiché en temps réel pendant la partie** pour tous les joueurs. Les **+2 points de victoire ne sont attribués qu'en fin de partie**, lorsqu'un joueur atteint 10 points de victoire.
 
 ### Plus longue route
 
