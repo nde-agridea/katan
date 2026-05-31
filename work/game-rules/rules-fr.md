@@ -108,7 +108,9 @@ La partie commence avec le **joueur le plus grand**. Le jeu se déroule dans le 
 
 ### Phase de placement initial
 
-Avant le premier tour, chaque joueur place ses pièces de départ dans le sens des aiguilles d'une montre. Lorsque c'est au tour d'un joueur de placer :
+Avant le premier tour, les joueurs placent leurs pièces de départ dans un **ordre en serpentin** : un premier passage dans le sens des aiguilles d'une montre (du premier au dernier joueur), puis un passage en sens inverse (du dernier au premier). Chaque joueur place donc deux fois au total.
+
+Lorsque c'est au tour d'un joueur de placer :
 
 1. Placer **1 colonie** sur un croisement de tuiles au choix.
 2. Placer **2 routes**, chacune reliée à la colonie ou au réseau de routes du joueur.
@@ -135,6 +137,8 @@ Toutes les tuiles dont le jeton numéro correspond au résultat produisent des r
 
 La tuile où se trouve le **voleur** ne produit **aucune ressource**, quel que soit le résultat.
 
+Après la distribution des ressources, **le tribut du voleur est collecté** : tout joueur possédant une colonie ou une ville sur la tuile du voleur doit céder 1 ressource de son choix (voir [Voleur](#voleur)).
+
 #### Résultat 7
 
 1. Tout joueur possédant **plus de 7 cartes ressources** doit en défausser la moitié, arrondie à l'inférieur.
@@ -144,7 +148,7 @@ La tuile où se trouve le **voleur** ne produit **aucune ressource**, quel que s
 
 Le joueur actif peut échanger des ressources de l'une ou plusieurs des façons suivantes :
 
-- **Échange entre joueurs** : négociation libre avec les autres joueurs.
+- **Échange entre joueurs** : le joueur actif propose des échanges aux autres joueurs ; ceux-ci peuvent accepter ou refuser. Seul le joueur actif peut initier une offre — les joueurs non actifs ne peuvent pas faire de contre-proposition.
 - **Échange avec la banque** : 4 ressources identiques contre 1 ressource au choix (4:1).
 - **Échange via un port** : utiliser un port adjacent à l'une de ses colonies ou villes (voir [Ports](#ports)).
 
@@ -195,12 +199,15 @@ Il existe un port spécialisé par type de ressource (6 au total) et 2 ports gé
 
 **Armées**
 - Doivent être placées sur une tuile où le joueur possède déjà une colonie ou une ville.
+- Chaque joueur dispose d'un maximum de **10 armées**. La construction est bloquée une fois cette limite atteinte. Les armées détruites au combat retournent dans la réserve du joueur.
 
 ---
 
 ## Cartes développement
 
 Les cartes développement peuvent être achetées pendant le tour d'un joueur. Une carte achetée doit être utilisée immédiatement lors de ce même tour — elle ne peut pas être conservée pour un tour ultérieur.
+
+Lorsque la dernière carte est piochée, l'ensemble des 25 cartes est immédiatement remélangé pour former une nouvelle pioche.
 
 ### Types de cartes
 
@@ -238,7 +245,7 @@ Le voleur est déplacé lorsqu'un joueur obtient **7** aux dés ou joue une cart
 
 - La tuile occupée par le voleur **ne produit aucune ressource**.
 - **Lors du premier placement sur une tuile** : si un autre joueur possède une colonie ou une ville sur cette tuile, le joueur qui a déplacé le voleur peut lui voler une carte ressource au hasard. Ce vol n'a lieu qu'une seule fois par placement.
-- **À chaque tour suivant** : tant que le voleur reste sur une tuile, tout joueur possédant une colonie ou une ville sur cette tuile doit céder une ressource de son choix **après le lancer de dés** de son tour.
+- **À chaque tour suivant** : tant que le voleur reste sur une tuile, tout joueur possédant une colonie ou une ville sur cette tuile doit céder une ressource de son choix **après la production des ressources** de son tour (c'est-à-dire après la distribution des ressources dues au lancer de dés, mais avant les échanges).
 
 ---
 
@@ -287,7 +294,7 @@ Le meneur actuel pour chaque bonus est suivi et **affiché en temps réel pendan
 
 ### Plus longue route
 
-Le joueur possédant la route continue la plus longue reçoit **+2 points de victoire**.
+Le joueur possédant la route continue la plus longue reçoit **+2 points de victoire**. La plus longue route est le plus long chemin sans répétition dans le réseau de routes du joueur (calculé par parcours en profondeur). Les embranchements ne sont pas cumulés — seul le chemin unique le plus long est retenu. La colonie ou la ville d'un adversaire sur un croisement **rompt la chaîne de routes** à cet endroit ; les segments de routes de part et d'autre ne peuvent pas être reliés à travers ce croisement.
 
 ### Plus grande armée
 

@@ -108,7 +108,9 @@ The game starts with the **tallest player** going first. Play proceeds **clockwi
 
 ### Initial placement phase
 
-Before the first turn, each player places their starting pieces in clockwise order. When it is a player's turn to place:
+Before the first turn, players place their starting pieces in **snake order**: one full clockwise pass (first → last), then one full counter-clockwise pass (last → first). Each player therefore places twice in total.
+
+When it is a player's turn to place:
 
 1. Place **1 settlement** on any tile intersection.
 2. Place **2 roads**, each connected to the player's settlement or road network.
@@ -135,6 +137,8 @@ Every tile whose number token matches the roll produces resources. Each player w
 
 The tile where the **robber** is present produces **no resources**, regardless of the roll.
 
+After resources are distributed, **robber tribute is collected**: any player with a settlement or city on the robber's current tile must give up 1 resource of their choice (see [Robber](#robber)).
+
 #### Rolling a 7
 
 1. Any player holding **more than 7 resource cards** must discard half their hand, rounded down.
@@ -144,7 +148,7 @@ The tile where the **robber** is present produces **no resources**, regardless o
 
 The active player may trade resources in any combination of the following:
 
-- **Player trade**: negotiate freely with other players.
+- **Player trade**: the active player makes offers to other players; other players may accept or decline. Only the active player may initiate an offer — non-active players may not counter-offer.
 - **Bank trade**: exchange 4 identical resources for 1 resource of any type (4:1).
 - **Port trade**: use a port adjacent to one of your settlements or cities (see [Ports](#ports)).
 
@@ -195,12 +199,15 @@ There is one specialized port per resource type (6 in total) and 2 generic ports
 
 **Armies**
 - Must be placed on a tile where the player already has a settlement or city.
+- Each player has a maximum of **10 armies**. Building is blocked once this limit is reached. Armies destroyed in combat return to the player's supply.
 
 ---
 
 ## Development Cards
 
 Development cards may be purchased during a player's turn. A purchased card must be used immediately on that same turn — it cannot be saved for a future turn.
+
+When the last card is drawn from the deck, the full set of 25 cards is reshuffled into a new deck immediately.
 
 ### Card types
 
@@ -238,7 +245,7 @@ The robber is moved whenever a player rolls a **7**, or when a **Knight** card i
 
 - The tile occupied by the robber **produces no resources**.
 - **When first moved onto a tile**: if another player has a settlement or city there, the player who moved the robber may steal one random resource card from them. This steal happens only once per placement.
-- **Each subsequent turn**: as long as the robber remains on a tile, any player with a settlement or city on that tile must give up one resource of their choice **after the dice roll** on their turn.
+- **Each subsequent turn**: as long as the robber remains on a tile, any player with a settlement or city on that tile must give up one resource of their choice **after resource production** on their turn (i.e., after resources from the dice roll have been distributed, but before trading).
 
 ---
 
@@ -287,7 +294,7 @@ The current leader for each bonus is tracked and **displayed live during the gam
 
 ### Longest Road
 
-The player with the longest continuous road receives **+2 victory points**.
+The player with the longest continuous road receives **+2 victory points**. The longest road is the longest single non-repeating path through the player's road network (calculated by depth-first search). Branching roads are not combined — only the longest single path counts. An opponent's settlement or city on an intersection **breaks the road chain** at that point; road segments on either side cannot be connected through it.
 
 ### Largest Army
 

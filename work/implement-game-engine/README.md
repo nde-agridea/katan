@@ -263,13 +263,18 @@ Tasks are ordered by dependency. Each task is a red-green-refactor TDD cycle.
 
 ---
 
-## Open questions
+## Design decisions
 
-1. **Map shape algorithm** – Which algorithm to use for generating the 19-tile shape (random walk, flood-fill, constraint solver)? A constraint solver is most correct but may be slow; a retry-based random walk may be acceptable.
-2. **Longest Road algorithm** – The continuous road calculation is non-trivial when roads branch. Clarify whether branching roads count only the longest single path, and confirm whether opponent roads break the chain.
-3. **Tile claiming ambiguity** – The rules say a tile is claimed by the first player to place an army there. Does moving a settlement onto a tile via `City upgrade` constitute a claim? (Rules are silent.)
-4. **Robber tribute timing** – The rules say tribute is paid "after the dice roll" on subsequent turns. Does this happen before or after normal resource production?
-5. **Development card deck size** – The rules give counts (Knight ×11, VP ×5, Road Building ×3, Monopoly ×2, Excess ×3, Disaster ×1 = 25 total). Should the deck be refilled if exhausted, or is purchasing blocked?
-6. **Player trade during non-active turns** – The rules allow trade only during the active player's turn. Can non-active players initiate counter-offers during the opponent's trade phase?
-7. **Initial placement order** – The rules say players place in clockwise order. Do all players get one round, or does the placement alternate (e.g. ABCD then DCBA as in classic Catan)?
-8. **Army piece limit** – The rules list 10 armies per player but don't state it as a hard limit. Confirm whether building is blocked at 10.
+The following questions were resolved before implementation began.
+
+| # | Question | Decision |
+|---|---|---|
+| 1 | Map shape algorithm | Retry-based random walk with a max-iteration cap. Validates shape constraints post-generation and retries on failure. |
+| 2a | Longest Road – branching | Longest single non-repeating path (DFS/backtracking). Branches are not combined. |
+| 2b | Longest Road – opponent structures | An opponent's settlement or city on an intersection breaks the road chain at that point. |
+| 3 | Tile claiming via city upgrade | No — only army placement (build or move) claims a tile. |
+| 4 | Robber tribute timing | After resource production. Turn sequence: Roll → Produce resources → Pay tribute → Trade → Build → End. |
+| 5 | Development card deck exhaustion | Reshuffle all 25 cards into a fresh deck when it runs out. |
+| 6 | Non-active player trade | Non-active players may only respond to offers initiated by the active player. They cannot initiate. |
+| 7 | Initial placement order | Snake order: clockwise first pass (A→B→C→D), then reverse pass (D→C→B→A). |
+| 8 | Army piece limit | Hard block at 10 per player. Armies destroyed in combat return to the player's supply. |
