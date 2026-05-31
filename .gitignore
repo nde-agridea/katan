@@ -1,0 +1,79 @@
+## .NET / C# gitignore
+
+# Build outputs
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Ll]og/
+[Ll]ogs/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+!**/packages/build/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Visual Studio / Rider files
+.vs/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# Rider
+.idea/
+*.DotSettings.user
+
+# ReSharper
+_ReSharperCache/
+*.ReSharper
+
+# Roslyn analyzer result files
+*.binlog
+
+# MSTest
+TestResults/
+*.trx
+*.coveragexml
+coverage*/
+
+# dotnet publish / deployment
+publish/
+**/publish/
+
+# dotCover
+*.dcvr
+
+# NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Environment / secrets
+.env
+.env.*
+*.pfx
+*.p12
+appsettings.Production.json
+appsettings.Local.json
+secrets.json
