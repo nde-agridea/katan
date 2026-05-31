@@ -115,3 +115,7 @@ The canonical rules document is `work/game-rules/rules.md` (English). Each suppo
 - **Immutable game state snapshots**: Prefer returning a full state snapshot per turn rather than incremental patches, to keep client logic simple.
 - **xUnit** for tests; **FluentAssertions** for assertions (preferred but not required yet).
 - **C# naming conventions**: PascalCase for types and members, camelCase for local variables, `_camelCase` for private fields.
+
+## VCS instructions
+
+- **Never commit anything**: Only humans can commit changes to the current branch, create or delete branches, or merge branches. Agents **never** have permission to commit, merge, or create/delete branches, or to push anything to the remote repository. All changes must be made in the current local branch and then reviewed and committed by a human.
