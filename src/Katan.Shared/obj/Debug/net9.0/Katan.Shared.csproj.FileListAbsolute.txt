@@ -1,0 +1,13 @@
+C:\Dev\GitHub\katan\src\Katan.Shared\bin\Debug\net9.0\Katan.Shared.deps.json
+C:\Dev\GitHub\katan\src\Katan.Shared\bin\Debug\net9.0\Katan.Shared.dll
+C:\Dev\GitHub\katan\src\Katan.Shared\bin\Debug\net9.0\Katan.Shared.pdb
+C:\Dev\GitHub\katan\src\Katan.Shared\obj\Debug\net9.0\Katan.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\GitHub\katan\src\Katan.Shared\obj\Debug\net9.0\Katan.Shared.AssemblyInfoInputs.cache
+C:\Dev\GitHub\katan\src\Katan.Shared\obj\Debug\net9.0\Katan.Shared.AssemblyInfo.cs
+C:\Dev\GitHub\katan\src\Katan.Shared\obj\Debug\net9.0\Katan.Shared.csproj.CoreCompileInputs.cache
+C:\Dev\GitHub\katan\src\Katan.Shared\obj\Debug\net9.0\Katan.Shared.sourcelink.json
+C:\Dev\GitHub\katan\src\Katan.Shared\obj\Debug\net9.0\Katan.Shared.dll
+C:\Dev\GitHub\katan\src\Katan.Shared\obj\Debug\net9.0\refint\Katan.Shared.dll
+C:\Dev\GitHub\katan\src\Katan.Shared\obj\Debug\net9.0\Katan.Shared.pdb
+C:\Dev\GitHub\katan\src\Katan.Shared\obj\Debug\net9.0\ref\Katan.Shared.dll
+C:\Dev\GitHub\katan\src\Katan.Shared\obj\Debug\net9.0\Katan.Shared.csproj.AssemblyReference.cache

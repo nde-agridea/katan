@@ -1,0 +1,6 @@
+@Katan.Server_HostAddress = http://localhost:5184
+
+GET {{Katan.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

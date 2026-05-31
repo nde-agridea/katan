@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "vOcFmIzQwnw=",
+  "success": true,
+  "projectFilePath": "C:\\Dev\\GitHub\\katan\\src\\Katan.Shared\\Katan.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nde\\.nuget\\packages\\google.protobuf\\3.27.0\\google.protobuf.3.27.0.nupkg.sha512",
+    "C:\\Users\\nde\\.nuget\\packages\\grpc.core.api\\2.63.0\\grpc.core.api.2.63.0.nupkg.sha512",
+    "C:\\Users\\nde\\.nuget\\packages\\grpc.tools\\2.63.0\\grpc.tools.2.63.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,16 @@
+C:\Dev\GitHub\katan\src\Katan.Client\bin\Debug\net9.0\Katan.Client.deps.json
+C:\Dev\GitHub\katan\src\Katan.Client\bin\Debug\net9.0\Katan.Client.dll
+C:\Dev\GitHub\katan\src\Katan.Client\bin\Debug\net9.0\Katan.Client.pdb
+C:\Dev\GitHub\katan\src\Katan.Client\bin\Debug\net9.0\Katan.Shared.dll
+C:\Dev\GitHub\katan\src\Katan.Client\bin\Debug\net9.0\Katan.Shared.pdb
+C:\Dev\GitHub\katan\src\Katan.Client\obj\Debug\net9.0\Katan.Client.csproj.AssemblyReference.cache
+C:\Dev\GitHub\katan\src\Katan.Client\obj\Debug\net9.0\Katan.Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\GitHub\katan\src\Katan.Client\obj\Debug\net9.0\Katan.Client.AssemblyInfoInputs.cache
+C:\Dev\GitHub\katan\src\Katan.Client\obj\Debug\net9.0\Katan.Client.AssemblyInfo.cs
+C:\Dev\GitHub\katan\src\Katan.Client\obj\Debug\net9.0\Katan.Client.csproj.CoreCompileInputs.cache
+C:\Dev\GitHub\katan\src\Katan.Client\obj\Debug\net9.0\Katan.Client.sourcelink.json
+C:\Dev\GitHub\katan\src\Katan.Client\obj\Debug\net9.0\Katan.Cl.CACD9183.Up2Date
+C:\Dev\GitHub\katan\src\Katan.Client\obj\Debug\net9.0\Katan.Client.dll
+C:\Dev\GitHub\katan\src\Katan.Client\obj\Debug\net9.0\refint\Katan.Client.dll
+C:\Dev\GitHub\katan\src\Katan.Client\obj\Debug\net9.0\Katan.Client.pdb
+C:\Dev\GitHub\katan\src\Katan.Client\obj\Debug\net9.0\ref\Katan.Client.dll

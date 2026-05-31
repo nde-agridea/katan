@@ -1,0 +1,2 @@
+obj\Debug\net9.0\Protos/Katan.cs \
+obj\Debug\net9.0\Protos/KatanGrpc.cs: Protos/katan.proto
